@@ -49,6 +49,7 @@ body {
     background-color: #fff;
     border: 1px solid #b4b4b4;
     color: #000;
+    margin-bottom: 15px;
 }
 #login-box input::placeholder {
     color: #b4b4b4
