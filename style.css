@@ -24,8 +24,9 @@ body {
     height: 100%;
     background: #fff;
     display: flex;
-    align-items: center;
+    align-items: flex-start;   /* Oben anfangen */
     justify-content: center;
+    padding-top: 60px;         /* Abstand nach oben, optional */
     z-index: 9999;
 }
 #login-box {
@@ -36,6 +37,12 @@ body {
     width: 300px;
     gap: 10px;
 }
+#login-box #banner {
+    text-align: center;
+    color: #000;
+    font-weight: 500;
+    font-size: 2rem;
+}
 #login-box input,
 #login-box button {
     width: 100%;
@@ -44,6 +51,11 @@ body {
     border-radius: 30px;
     font-size: 1rem;
     border: none;
+        user-select: none;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -o-user-select: none;
 }
 #login-box input {
     background-color: #fff;

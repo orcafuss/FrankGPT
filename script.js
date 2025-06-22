@@ -1,4 +1,4 @@
-function checkLogin() {
+function login() {
     const user = document.getElementById('login-user').value;
     const pass = document.getElementById('login-pass').value;
     const error = document.getElementById('error');
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const passField = document.getElementById("login-pass");
     passField.addEventListener("keydown", function (e) {
         if (e.key === "Enter") {
-            checkLogin();
+            login();
         }
     });
 });
