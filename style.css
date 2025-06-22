@@ -49,6 +49,7 @@ body {
 @media (max-width: 800px) {
     .frank {
         padding-left: 15px;
+        padding-right: 15px;
     }
 }
 @media (min-width: 800px) {
