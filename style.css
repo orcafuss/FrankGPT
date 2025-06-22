@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+    
+* {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+}
+body {
+    background-color: #212121;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+      overflow-x: hidden;
+
+}
+
+#scroll-container {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+#scroll-container::-webkit-scrollbar {
+  width: 10px;
+}
+#scroll-container::-webkit-scrollbar-track {
+  background: transparent; /* Hintergrundfarbe der Scroll-Leiste */
+}
+#scroll-container::-webkit-scrollbar-thumb {
+  background-color: #303030;  /* Farbe des Scrollbalkens */
+  border-radius: 5px;
+}
+#scroll-container::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
+}
+
+#chat-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;    
+    padding-top: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+@media (max-width: 800px) {
+    .frank {
+        padding-left: 15px;
+    }
+}
+@media (min-width: 800px) {
+    #chat-container, #input-container {
+    margin-left: 30vw;
+    margin-right: 30vw;
+    width: 40vw;
+    }
+}
+
+.message {
+    display: inline-block;       /* Damit align-self funktioniert */
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: pre-wrap;}
+.user {
+    align-self: flex-end;          /* Rechtsbündig innerhalb des Containers */
+    background-color: #303030;
+    border-radius: 30px;
+    padding: 20px;
+    max-width: 600px;
+    width: fit-content;            /* Box wird nur so breit wie nötig */
+    text-align: left;
+
+}
+
+.frank {
+    align-self: flex-start;
+    text-align: left;
+}
+
+#input-container {
+    position: relative;
+    display: flex;
+    align-items: center; /* Zentriert den Inhalt vertikal */
+    padding: 0.5rem;
+    background-color: #303030;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border-radius: 30px;
+}
+
+#input-container textarea {
+    flex: 1;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #ffffff;
+    word-wrap: break-word;
+    overflow-y: hidden;
+    resize: none;
+    padding-right: 70px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+
+#input-container textarea::placeholder {
+    color: #afafaf;
+}
+
+#input:focus {
+    outline: none;
+}
+
+button {
+    margin-left: 0.5rem;
+    background-color: #ffffff;
+    color: #000000;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+button:hover {
+    background-color: #afafaf;
+}
