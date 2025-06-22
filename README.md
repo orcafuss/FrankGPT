@@ -1,3 +1,5 @@
+Version 0.2
+
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
 
 This work is licensed under a
