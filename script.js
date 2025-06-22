@@ -1,3 +1,26 @@
+function checkLogin() {
+    const user = document.getElementById('login-user').value;
+    const pass = document.getElementById('login-pass').value;
+    const error = document.getElementById('error');
+
+    // HARDCODED LOGINDATEN – hier kannst du Benutzername/Passwort festlegen
+    if (user === "Frank" && pass === "GPT") {
+        document.getElementById('login-overlay').style.display = 'none';
+    } else {
+        error.style.display = 'block';
+    }
+}
+
+// Optional: Enter-Taste im Passwortfeld erlaubt Login
+document.addEventListener("DOMContentLoaded", () => {
+    const passField = document.getElementById("login-pass");
+    passField.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") {
+            checkLogin();
+        }
+    });
+});
+
 // Frank begrüßt beim Start
 window.addEventListener("DOMContentLoaded", () => {
   const greeting = () => {
