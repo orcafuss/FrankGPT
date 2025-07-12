@@ -138,7 +138,8 @@ function normalizeUmlauts(text) {
     .replace(/ä/g, "ae")
     .replace(/ö/g, "oe")
     .replace(/ü/g, "ue")
-    .replace(/ß/g, "ss");
+    .replace(/ß/g, "ss")
+    .replace(/\s+/g, " ");
 }
 
 function generateFrankResponse(userInput) {
@@ -237,7 +238,7 @@ function generateFrankResponse(userInput) {
     return response;
   }
 
-  const simpleWords = ["ja", "nein", "ok", "gut", "vielleicht", "verstehe", "hm", "achso"];
+  const simpleWords = ["ja", "ok", "verstehe", "gut", "stimmt", "nein", "ne", "hm", "vielleicht", "achso"];
   if (userInput.split(" ").length === 1 && simpleWords.includes(userInputLower)) {
     const msg = getRandom([
       "Versuchst du, mit diesen halbherzigen Ein-Wort-Sätzen Jonathan nachzuahmen?",

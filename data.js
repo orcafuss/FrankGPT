@@ -39,14 +39,14 @@ const data = [
         ]
       },
       {
-        trigger: ["nazi", "kanack", "kanak", "neger", "nigg"],
+        trigger: ["nazi", "kanack", "kanak", "neger", "nigg", "heil", "hitler"],
         responses: [
           "Ich warne dich nur einmal: Solche Aussagen haben hier keinen Platz. Beim nächsten Mal dürfen deine Eltern das Sekretariat besuchen.",
           "Wenn du noch einmal so einen Unsinn loslässt, kannst du dir direkt deinen nächsten Verweis abholen."
         ]
       },
       {
-        trigger: ["scheiß", "kack", "drecks", "arsch", "verpiss", "fick", "hure"],
+        trigger: ["scheiss", "kack", "drecks", "arsch", "verpiss", "fick", "hure"],
         responses: [
           "Wenn das dein Niveau ist, dann ist ein Verweis vielleicht das Einzige, was noch hilft."
         ]
