@@ -3,42 +3,48 @@
     <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <title>FrankGPT</title>
+        <title>TFL Studios</title>
         <link rel="stylesheet" href="style.css"/>
         <meta name="robots" content="noindex">
     </head>
-
     <body>
-        <!-- Login Overlay -->
-        <div id="login-overlay">
-            <div id="login-box">
-                <p id="banner">Willkommen zurück</p>
-                <input type="text" id="login-user" placeholder="Benutzername" />
-                <input type="password" id="login-pass" placeholder="Passwort" />
-                <button onclick="login()">Weiter</button>
-                <p id="error">Ungültiger Nutzername oder Passwort</p>
-            </div>
+        <div class="banner">
+            <h1>TFL Studios</h1>
+            <p>Unabhängig. Kreativ. Bewegend.</p>
         </div>
-        <div id="scroll-container">
-            <div id="chat-container">
-
-            </div>
-        </div>
-        <div id="input-container">
-            <textarea type="text" id="input" placeholder="Stelle irgendeine Frage" autocomplete="off"></textarea>
-            <button id="send-button" onclick="sendMessage()">
-                <svg 
-                    viewBox="0 0 384 512" 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    fill="currentColor" 
-                    width="20" 
-                    height="20"
-                >
-                    <path d="M374.6 246.6C368.4 252.9 360.2 256 352 256s-16.38-3.125-22.62-9.375L224 141.3V448c0 17.69-14.33 31.1-31.1 31.1S160 465.7 160 448V141.3L54.63 246.6c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160C387.1 213.9 387.1 234.1 374.6 246.6z"/>
-                </svg>
-            </button>
-        </div>
-        <script src="data.js"></script>
-        <script src="script.js"></script>
+        <main>
+            
+            <section class="about">
+                <h1>Wer wir sind</h1>
+                <p>Wir sind Fynn und Tim [...]</p>
+            </section>
+            <section class="projects">
+                <h1>Bevorstehende Filmprojekte</h1>
+                <div class="project-container">
+                    <a href="https://www.youtube.com"><img class="poster" src="assets/365-days-of-dead.png"></a>
+                    <p class="project-description">Unser Pilotprojekt 365 Days of Dead spielt in einer alternativen Gegenwart, in der [...]</p>
+                </div>
+            </section>
+            <section class="contact">
+                <h1>Du willst mitmachen?</h1>
+                <p>Wir suchen Darsteller und Drehbuchautoren für unsere aktuellen Projekte. Hast du Lust, mit uns Geschichten zu schreiben und die Indie-Filmwelt zu verändern? Dann schick uns gerne eine DM auf Instagram oder eine E-Mail!</p>
+            </section>
+            <section class="video">
+                <iframe
+                src="https://www.youtube-nocookie.com/embed/ApKJN2ji_s0?si=zVSKtccipraK-8tM"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                controls="0">
+                </iframe>
+            </section>
+        </main>
+        <footer>
+            <p>&copy 2025 TFL Studios</p>
+            <p>
+                <a href="impressum-und-datenschutz.html#Impressum">Impressum</a> |
+                <a href="impressum-und-datenschutz.html#Datenschutz">Datenschutz</a>
+            </p>
+        </footer>
     </body>
 </html>
