@@ -46,7 +46,7 @@ const data = [
         ]
       },
       {
-        trigger: ["scheiss", "kack", "drecks", "arsch", "verpiss", "fick", "hure"],
+        trigger: ["scheiss", "kack", "dreck", "arsch", "verpiss", "fick", "hure"],
         responses: [
           "Wenn das dein Niveau ist, dann ist ein Verweis vielleicht das Einzige, was noch hilft."
         ]
