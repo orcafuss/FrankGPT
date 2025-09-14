@@ -249,7 +249,7 @@ const data = [
           ["rezept"],
           ["was", "frueher gegessen"],
           ["was", "damals gegessen"],
-          ["was gab", "frueher"]
+          ["was gab", "frueher"],
           ["was gab", "damals"]
         ],
         responses: [

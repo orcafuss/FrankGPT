@@ -119,6 +119,7 @@ function sendMessage() {
       if (i === 0) {
         const placeholder = document.createElement("div");
         placeholder.classList.add("message", "frank");
+        placeholder.textContent = "\u200B"; // Zero-width space
         document.getElementById("chat-container").appendChild(placeholder);
         placeholder.scrollIntoView({ behavior: "smooth" });
         typeNextChar.placeholder = placeholder;
@@ -157,7 +158,18 @@ function normalizeText(text) {
 function generateFrankResponse(userInput) {
   const userInputLower = normalizeText(userInput);
 
-  // Greeting-Logik auch bei Nutzerbegrüßungen anwenden
+  // --- Letzte Nachricht wiederholen ---
+  if (/(wie bitte\??|wiederholen\??|nochmal sagen\??|erneut sagen\??|sie gesagt\??)/.test(userInputLower)) {
+    if (lastFrankReply) {
+      const reply = "Ich sagte: " + lastFrankReply;
+      return reply;
+    } else {
+      const reply = "Was soll ich wiederholen? Ich hab doch noch gar nichts gesagt.";
+      return reply;
+    }
+  }
+
+  // Begrüßungslogik auch bei Nutzerbegrüßungen anwenden
   if (/(guten\s+(morgen|tag|vormittag|mittag|nachmittag|abend)|gute\s+nacht|gruess\s+gott|willkommen)/.test(userInputLower)) {
     const response = greeting();
     lastFrankReply = response;
@@ -185,6 +197,7 @@ function generateFrankResponse(userInput) {
     for (const block of data) {
       if (block.type === type) {
         for (const entry of block.entries) {
+          if (entry.is_fallback) continue; // <-- Skip fallback entries here!
           if (entry.trigger_groups && entry.trigger_groups.length) {
             for (const group of entry.trigger_groups) {
               if (group.every(trigger => userInputLower.includes(trigger))) {
@@ -223,6 +236,7 @@ function generateFrankResponse(userInput) {
         }
       }
     }
+    console.log("DEBUG Kein Fallback gefunden für", type);
     return null;
   }
 
@@ -257,7 +271,7 @@ function generateFrankResponse(userInput) {
     return response;
   }
 
-const simpleWords = ["ja", "ok", "verstehe", "gut", "stimmt", "nein", "ne", "hm", "vielleicht", "achso"];
+const simpleWords = ["ja", "ok", "verstehe", "gut", "stimmt", "nein", "ne", "hm", "vielleicht", "achso", "was", "wer", "wo"];
 if (userInput.split(" ").length === 1 && simpleWords.includes(userInputLower)) {
   const oneWordMessagePool = [
     "Versuchst du, mit diesen halbherzigen Ein-Wort-Sätzen Jonathan nachzuahmen?",
