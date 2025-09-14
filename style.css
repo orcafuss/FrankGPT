@@ -1,11 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
-
-
 * {
     font-family: "Inter", sans-serif;
     font-size: 1rem;
 }
+
 body {
     background-color: #212121;
     color: #fff;
@@ -15,7 +14,6 @@ body {
     flex-direction: column;
     height: 100vh;
     overflow-x: hidden;
-
 }
 
 #login-overlay {
@@ -31,6 +29,7 @@ body {
     padding-top: 60px;
     z-index: 9999;
 }
+
 #login-box {
     padding: 30px;
     display: flex;
@@ -39,12 +38,14 @@ body {
     width: 300px;
     gap: 10px;
 }
+
 #login-box #banner {
     text-align: center;
     color: #000;
     font-weight: 500;
     font-size: 2rem;
 }
+
 #login-box input,
 #login-box button {
     width: 100%;
@@ -53,37 +54,40 @@ body {
     border-radius: 30px;
     font-size: 1rem;
     border: none;
-        user-select: none;
-        -moz-user-select: none;
-        -khtml-user-select: none;
-        -webkit-user-select: none;
-        -o-user-select: none;
+    user-select: none;
 }
+
 #login-box input {
     background-color: #fff;
     border: 1px solid #b4b4b4;
     color: #000;
     margin-bottom: 15px;
 }
+
 #login-box input::placeholder {
     color: #b4b4b4
 }
+
 #login-box input:focus {
     outline: none;
     border-color: #3e68ff;
 }
+
 #login-box input:focus::placeholder {
     color: #3e68ff;
 }
+
 #login-box button {
     background-color: #131313;
     color: #fff;
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
+
 #login-box button:hover {
     background-color: #333333;
 }
+
 #error {
     color: #d00e17;
     display: none;
@@ -91,22 +95,26 @@ body {
 }
 
 #scroll-container {
-  height: 100vh;
-  overflow-y: auto;
-  overflow-x: hidden;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
+
 #scroll-container::-webkit-scrollbar {
-  width: 10px;
+    width: 10px;
 }
+
 #scroll-container::-webkit-scrollbar-track {
-  background: transparent; /* Hintergrundfarbe der Scroll-Leiste */
+    background: transparent;
 }
+
 #scroll-container::-webkit-scrollbar-thumb {
-  background-color: #303030;  /* Farbe des Scrollbalkens */
-  border-radius: 5px;
+    background-color: #303030;
+    border-radius: 5px;
 }
+
 #scroll-container::-webkit-scrollbar-thumb:hover {
-  background-color: #aaa;
+    background-color: #aaa;
 }
 
 #chat-container {
@@ -115,44 +123,50 @@ body {
     flex-direction: column;
     overflow-y: auto;
     overflow-x: hidden;    
-    padding-top: 1rem;
+    padding: 1.5rem; /* etwas größerer Abstand links & rechts */
     width: 100%;
     box-sizing: border-box;
-
 }
 
-
 .message {
-    display: inline-block;       /* Damit align-self funktioniert */
+    display: inline-block;
     margin-bottom: 1rem;
     line-height: 1.5;
     overflow-wrap: break-word;
     word-break: break-word;
-    white-space: pre-wrap;}
+    white-space: pre-wrap;
+    max-width: 100%;
+}
+
 .user {
-    align-self: flex-end;          /* Rechtsbündig innerhalb des Containers */
+    align-self: flex-end;
     background-color: #303030;
     border-radius: 30px;
-    padding: 20px;
-    max-width: 600px;
-    width: fit-content;            /* Box wird nur so breit wie nötig */
+    padding: 18px; /* leicht vergrößert */
+    margin-left: 1.5rem;  /* etwas mehr Abstand links */
+    margin-right: 0;
+    width: fit-content;
+    max-width: calc(100% - 3rem); /* Blase stoppt vor Rand */
     text-align: left;
-
 }
+
 .frank {
     align-self: flex-start;
+    background: none;   /* keine Blase */
+    padding: 0;         /* kein Innenabstand */
+    margin: 0;          /* Abstand über Container-Padding gesteuert */
     text-align: left;
 }
 
 #input-container {
     position: relative;
     display: flex;
-    align-items: center; /* Zentriert den Inhalt vertikal */
+    align-items: center;
     padding: 0.5rem;
     background-color: #303030;
-    margin: 0 auto;
-    margin-bottom: 30px;
+    margin: 0 auto 30px auto;
     border-radius: 30px;
+    width: calc(100% - 3rem); /* entspricht Abstand links & rechts wie die Blasen */
 }
 
 #input-container textarea {
@@ -166,7 +180,7 @@ body {
     resize: none;
     padding-right: 70px;
     padding-top: 15px;
-    padding-left: 15px;
+    padding-left: 15px; /* an Blasen-Padding angepasst */
     padding-bottom: 15px;
 }
 
@@ -200,18 +214,31 @@ body {
     background-color: #afafaf;
 }
 
+/* Erscheinungsbild auf Mobilgeräten */
 @media (max-width: 800px) {
+    #chat-container, #input-container {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
     #chat-container {
-        width: 90vw;
+        padding-left: 1.5rem;  /* Abstand links wie Blasen */
+        padding-right: 1.5rem; /* Abstand rechts wie Blasen */
+    }
+
+    .user {
+        max-width: 100%;
+        margin-left: 0;
     }
 }
 
+/* Erscheinungsbild auf größeren Bildschirmen */
 @media (min-width: 800px) {
     #chat-container, #input-container {
         margin-left: 30vw;
         margin-right: 30vw;
         width: 40vw;
     }
-
 }
-
