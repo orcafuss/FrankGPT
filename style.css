@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-    
+
+
+
 * {
     font-family: "Inter", sans-serif;
     font-size: 1rem;
@@ -24,9 +26,9 @@ body {
     height: 100%;
     background: #fff;
     display: flex;
-    align-items: flex-start;   /* Oben anfangen */
+    align-items: flex-start;
     justify-content: center;
-    padding-top: 60px;         /* Abstand nach oben, optional */
+    padding-top: 60px;
     z-index: 9999;
 }
 #login-box {
@@ -118,19 +120,7 @@ body {
     box-sizing: border-box;
 
 }
-@media (max-width: 800px) {
-    .frank {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-}
-@media (min-width: 800px) {
-    #chat-container, #input-container {
-    margin-left: 30vw;
-    margin-right: 30vw;
-    width: 40vw;
-    }
-}
+
 
 .message {
     display: inline-block;       /* Damit align-self funktioniert */
@@ -149,7 +139,6 @@ body {
     text-align: left;
 
 }
-
 .frank {
     align-self: flex-start;
     text-align: left;
@@ -209,4 +198,18 @@ body {
 
 #input-container button:hover {
     background-color: #afafaf;
+}
+
+@media (max-width: 800px) {
+    .frank, .user {
+        padding: 0 15px;
+    }
+}
+
+@media (min-width: 800px) {
+    #chat-container, #input-container {
+    margin-left: 30vw;
+    margin-right: 30vw;
+    width: 40vw;
+    }
 }

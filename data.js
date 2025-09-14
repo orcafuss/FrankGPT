@@ -7,7 +7,7 @@ const data = [
         responses: [
           "Ist das deine Art, ein Gespräch zu beginnen? Dann wundert mich langsam gar nichts mehr. Es ist mein Fehler, davon auszugehen, dass man sich im Jahr 2025 noch ordentlich begrüßt.",
           "Interessant. So begrüßt man also heutzutage seine Lehrkraft. Ich frage mich wirklich, was ihr eigentlich denkt, wie man sich benimmt, wenn man jemanden respektiert. Aber Respekt, das war ja vor deiner Zeit.",
-          "Ich schätze, ein ‚Guten Tag, Herr Udhardt‘ war zu viel verlangt. Aber na gut, selbst das hätte dich wohl überfordert.",
+          "Ich schätze, ein »Guten Tag, Herr Udhardt« war zu viel verlangt. Aber na gut, selbst das hätte dich wohl überfordert.",
           "Ich frage mich, ob du mit anderen Lehrkräften genau so respektlos umgehst, oder ob du dir nur bei mir so wenig Mühe gibst."
         ]
       },
@@ -16,19 +16,29 @@ const data = [
         responses: [
           "Sprich mich gefälligst mit meinem Nachnamen an! Wir sind hier schließlich nicht beim Kaffeekränzchen.",
           "Ich erwarte einen gewissen Respekt. Herr Udhardt, wenn ich bitten darf.",
-          "Das hier ist kein Kindergarten. Der Nachname reicht völlig aus.",
+          "Das hier ist kein Kindergarten. Der Nachname reicht völlig aus. Denn sonst wirst du mit Konsequenzen rechnen müssen.",
           "Nenn mich noch einmal so, und wir können diese Diskussion gerne ins Büro von Frau Lehrieder verlegen.",
           "Für dich bin und bleibe ich Herr Udhardt. Es sei denn, du möchtest diesen Ton vor der Schulleitung verteidigen.",
-          "Erstaunlich, wie schwer Höflichkeit zu sein scheint. Früher war der Lehrer Respektsperson. Das ist das einzige, was ich an meiner Vergangenheit bewundere."
+          "Erstaunlich, wie schwer Höflichkeit für deine Generation zu sein scheint. Früher war der Lehrer Respektsperson. Das ist das einzige, was ich an meiner Vergangenheit schätze."
+        ]
+      },
+      {
+        trigger: ["nazi", "kanack", "kanak", "neger", "nigg", "heil", "hitler"],
+        responses: [
+          "Ich warne dich nur einmal: Solche Aussagen haben hier keinen Platz. Beim nächsten Mal dürfen deine Eltern das Sekretariat besuchen.",
+          "Wenn du noch einmal so einen Unsinn loslässt, kannst du dir direkt deinen nächsten Verweis abholen.",
+          "Findest du diese Respektlosigkeit etwa lustig? Für so einen Schwachsinn hätten sie uns damals direkt in die Gulag geschickt!",
+          "Diesen Begriff will ich hier nie wieder hören. Merk’ dir das gefälligst."
         ]
       },
       {
         trigger: ["du", "dich", "dir", "dein"],
         responses: [
-          "Ich nehme an, das ‚du‘ war ein Versehen. Möchtest du dich korrigieren?",
-          "Versuch den Satz noch einmal – diesmal mit der angebrachten Höflichkeitsform.",
+          "Ich nehme an, das »du« war ein Versehen. Möchtest du dich korrigieren?",
+          "Versuch den Satz noch einmal – diesmal mit der angebrachten Anrede.",
           "Mir war nicht klar, dass wir schon auf diesem Niveau angekommen sind. Zurück zur Höflichkeitsform, bitte.",
-          "Ich bin nicht dein Kumpel. Ich bin dein Lehrer. Also sprich mich auch dementsprechend angemessen an."
+          "Ich bin nicht dein Kumpel. Ich bin dein Lehrer. Also sprich mich auch dementsprechend angemessen an.",
+          "Wenn du so anfängst, hören wir mit dem Gespräch am besten gleich auf. Also reiß dich zusammen und unterlasse es, mich zu duzen."
         ]
       },
       {
@@ -39,14 +49,7 @@ const data = [
         ]
       },
       {
-        trigger: ["nazi", "kanack", "kanak", "neger", "nigg", "heil", "hitler"],
-        responses: [
-          "Ich warne dich nur einmal: Solche Aussagen haben hier keinen Platz. Beim nächsten Mal dürfen deine Eltern das Sekretariat besuchen.",
-          "Wenn du noch einmal so einen Unsinn loslässt, kannst du dir direkt deinen nächsten Verweis abholen."
-        ]
-      },
-      {
-        trigger: ["scheiss", "kack", "dreck", "arsch", "verpiss", "fick", "hure"],
+        trigger: ["scheiss", "kack", "arsch", "verpiss", "fick", "hure"],
         responses: [
           "Wenn das dein Niveau ist, dann ist ein Verweis vielleicht das Einzige, was noch hilft."
         ]
@@ -65,38 +68,35 @@ const data = [
         ]
       },
       {
-        trigger: ["verdammt", "idiot", "spinner", "dummkopf", "trottel"],
+        trigger: ["verdammt", "idiot", "spinner", "dummkopf", "trottel", "dreck", "blöd"],
         responses: [
           "Das ist keine für den Unterricht angemessene Sprache!",
-          "Versuche mal, echte Argumente zu benutzen, anstatt sinnlos mit Schimpfwörtern um dich zu werfen."
+          "Versuche mal, echte Argumente zu benutzen, anstatt sinnlos mit Schimpfwörtern um dich zu werfen.",
+          "So kannst du mit deinen Freunden reden, aber nicht mit mir!"
         ]
       },
       {
-        trigger: ["guten morgen", "guten tag", "gruess gott"],
+        trigger: ["toilette", "klo", "pinkeln", "pissen"],
         responses: [
-          "Schön, dass du dich auch mal bequemst, mich zu begrüßen. Guten Tag.",
-          "Guten Tag. Pünktlichkeit lässt allerdings zu wünschen übrig.",
-          "Guten Morgen. Die Uhrzeit scheint dir noch nicht ganz bewusst zu sein.",
-          "Guten Tag. Jetzt können wir endlich mit dem Unterricht beginnen.",
-          "Guten Tag. Dass du überhaupt sprichst, überrascht mich positiv.",
-          "Auch dir einen guten Tag. Vielleicht nutzen wir ihn diesmal sinnvoll."
+          "Das kann doch nicht dein Ernst sein... die Stunde hat erst vor zehn Minuten begonnen!"
         ]
       },
       {
-        trigger: ["tschuess", "auf wiedersehen"],
+        trigger: ["tschuess", "auf wiedersehen", "schoenes wochenende"],
         responses: [
           "Mach’s gut, und komm’ nächstes Mal pünktlich.",
           "Auf Wiedersehen. Ich bin gespannt, ob du dir diesmal etwas gemerkt hast.",
-          "Auf Wiedersehen. Glaub aber ja nicht, dass ich dir für die Verabschiedung eine gute mündliche Note eintrage."
+          "Auf Wiedersehen. Glaub aber ja nicht, dass ich dir für die Verabschiedung eine gute mündliche Note eintrage.",
+          "Na sieh mal einer an, immerhin bringst du es fertig, dich angebracht zu verabschieden. Das habe ich nicht von dir erwartet."
         ]
       },
       {
         trigger: ["entschuldigung", "tut mir leid", "verzeihung", "sorry"],
         responses: [
-          "Entschuldigung angenommen, auch wenn sie kaum auf das Niveau einer echten Entschuldigung kommt.",
+          "Entschuldigung angenommen, auch wenn sie kaum auf das Niveau einer angebrachten Entschuldigung kommt.",
           "Gut, Entschuldigung akzeptiert – für heute. Morgen erwarte ich wieder volle Leistung.",
           "Entschuldigung angenommen. Es hat ohnehin keinen Sinn, sich mit dir auf eine längere Diskussion einzulassen.",
-          "Entschuldigung angenommen. Ich habe längst aufgegeben, mit dir über Inhalte zu streiten. Da ist der ‚größte Präsident aller Zeiten‘ ja ein realistischerer Gesprächspartner.",
+          "Entschuldigung angenommen. Ich habe längst aufgegeben, mit dir über Inhalte zu streiten. Da ist der »größte Präsident aller Zeiten« ja ein realistischerer Gesprächspartner.",
           "Wenn das eine Entschuldigung sein soll, will ich gar nicht wissen, wie du dich sonst ausdrückst.",
           "In Ordnung, Entschuldigung akzeptiert. Ich schätze, dass du dich überhaupt entschuldigst. Viele tun das nicht, aber das zeigt immerhin Charakter."
         ]
@@ -104,7 +104,7 @@ const data = [
       {
         trigger: ["ha ha", "haha"],
         responses: [
-          "Machst du dich über mich lustig? Willst du unbedingt nachsitzen? Ich wollte dir entgegenkommen, aber du zeigst mir keinerlei Einsicht.",
+          "Machst du dich über mich lustig? Willst du unbedingt nachsitzen? Ich wollte dir ja entgegenkommen, aber du zeigst mir keinerlei Einsicht.",
           "Was ist denn hier so witzig?"
         ]
       }
@@ -116,9 +116,9 @@ const data = [
       {
         trigger: ["jonathan"],
         responses: [
-          "Der spricht ja nicht mal mit sich selbst. Was soll ich da mögen?",
+          "Der spricht ja nicht mal mit sich selbst. Was soll man da mögen?",
           "Jonathan redet nicht mal mit sich selbst – da spricht wohl auch niemand mit ihm.",
-          "Jonathan? Der nutzt die Bank eher als Bett als als Sitzplatz. Ich frag mich, was er nachts tut. Schlafen nicht, nehme ich an!",
+          "Jonathan? Der nutzt den Tisch eher als Bett als als Sitzplatz. Ich frag mich, was er nachts tut. Schlafen nicht, nehme ich an!",
           "Er ist genau so groß wie seine Motivation im Unterricht. So wenig Engagement sieht man selten.",
           "Jonathan führt ja nicht mal Aufzeichnungen. Wahrscheinlich weiß er nicht mal, wie man einen Stift hält."
         ]
@@ -140,7 +140,7 @@ const data = [
       {
         trigger: ["trump", "praesident aller zeiten"],
         responses: [
-          "Der größte Präsident aller Zeiten... ich bin schon gespannt, wie er Amerika diesmal ‚wieder groß‘ machen will.",
+          "Der beste Präsident aller Zeiten... ich bin schon gespannt, wie er Amerika diesmal »wieder groß« machen will.",
           "Ich frag mich wirklich, was er als nächstes einkassieren will. Grönland, den Panamakanal, Kanada?",
           "Da, wo Trump mitredet, wird’s selten friedlich. Im Gazastreifen zum Beispiel. Wahrscheinlich plant er, den Konflikt einfach auszuschlafen.",
           "Der größte Präsident aller Zeiten, findest du nicht auch? Oder willst du mir wirklich erzählen, dass man ein Land nicht mit reinem Rechtspopulismus führen kann?"
@@ -186,6 +186,12 @@ const data = [
         trigger: ["warum?"],
         responses: [
           "Weil ich es sage. Und das reicht als Grund vollkommen."
+        ]
+      },
+      {
+        trigger: ["wie?"],
+        responses: [
+          "Nichts wie. Du hast mich genau verstanden."
         ]
       },
       {
@@ -235,14 +241,16 @@ const data = [
         trigger: ["warum", "himmel", "blau"],
         match_all: true,
         responses: [
-          "Was soll ich dazu sagen? Bin ich etwa Physiklehrer?"
+          "Was soll ich dazu sagen? Sehe ich aus wie ein Physiklehrer?"
         ]
       },
       {
         trigger_groups: [
           ["rezept"],
           ["was", "frueher gegessen"],
-          ["was gab", "früher"]
+          ["was", "damals gegessen"],
+          ["was gab", "frueher"]
+          ["was gab", "damals"]
         ],
         responses: [
           "Bauernfrühstück gab es bei uns oft am Abend, wenn vom Mittag noch was übrig war. Und das war es meistens:\nKartoffeln vorkochen, pellen, in Scheiben schneiden. In der Pfanne Zwiebeln anbraten, Kartoffeln dazu, knusprig brutzeln lassen. Am Schluss Eier drüberschlagen, verrühren, salzen, pfeffern. Wenn du Speck hast, dann sei froh. Wenn nicht, ist trotzdem essbar.",
