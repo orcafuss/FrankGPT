@@ -201,8 +201,11 @@ body {
 }
 
 @media (max-width: 800px) {
-    .frank, .user {
-        padding: 0 15px;
+    .frank {
+        padding-left: 15px;
+    }
+    .user {
+        padding-right: 30px;
     }
 }
 
@@ -212,4 +215,5 @@ body {
     margin-right: 30vw;
     width: 40vw;
     }
+
 }
