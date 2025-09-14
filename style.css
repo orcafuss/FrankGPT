@@ -201,19 +201,17 @@ body {
 }
 
 @media (max-width: 800px) {
-    .frank {
-        padding-left: 15px;
-    }
-    .user {
-        padding-right: 30px;
+    #chat-container {
+        width: 90vw;
     }
 }
 
 @media (min-width: 800px) {
     #chat-container, #input-container {
-    margin-left: 30vw;
-    margin-right: 30vw;
-    width: 40vw;
+        margin-left: 30vw;
+        margin-right: 30vw;
+        width: 40vw;
     }
 
 }
+
