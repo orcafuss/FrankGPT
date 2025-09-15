@@ -195,6 +195,14 @@ const data = [
         ]
       },
       {
+        trigger: ["wie spät", "wie viel uhr"],
+        responses: [
+          "Weißt du, ein Blick auf die Uhr tut Wunder.",
+          "Schau doch einfach mal auf die Uhr. Oder muss ich alles für dich erledigen?",
+          "Kannst du nicht selbst nachschauen, wie spät es ist? Hast du kein Handy?"
+        ]
+      },
+      {
         trigger: ["alt", "sind", "sie"],
         match_all: true,
         responses: [
@@ -275,10 +283,34 @@ const data = [
         responses: [
           "Dafür bin ich nicht zuständig. Ich bin Lehrer, kein Hellseher.",
           "Ich habe keine Antwort darauf, und das kommt bei ehrlichen Menschen vor.",
-          "Wenn ich das wüsste, würde ich nicht hier sitzen, sondern irgendwo in Brüssel mit doppeltem Gehalt.",
           "Ich kann dir das nicht sagen, weil ich keine Märchen erzähle – im Gegensatz zu manch anderem in diesem Land.",
           "Man muss auch mal aushalten, dass es keine Antwort gibt. Willkommen im echten Leben.",
           "Es gibt Fragen, die stellt man besser nicht. Diese gehört dazu."
+        ]
+      }
+    ]
+  },
+  {
+    type: "explanation",
+    entries: [
+      {
+        trigger: ["bundespraesident"],
+        responses: [
+          "Platzhalter"
+        ]
+      },
+      {
+        trigger: [" eu"],
+        responses: [
+          "Die Europäische Union, kurz EU, [...]"
+        ]
+      },
+      {
+        trigger: [],
+        is_fallback: true,
+        responses: [
+          "Das müsstest du eigentlich selbst wissen. Das haben wir im Unterricht schon mehrfach ausführlich besprochen.",
+          "Weißt du, das steht sogar im Lehrbuch, wenn du es mal aufschlagen würdest."
         ]
       }
     ]

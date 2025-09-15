@@ -4,11 +4,11 @@ function login() {
     const error = document.getElementById('error');
     // Hartkodierte Login-Daten
     const accounts = {
-        "Lennox": "GPT",
-        "Leo": "GPT",
-        "Maximilian": "GPT",
-        "Nayo": "GPT",
-        "Simon": "GPT"        
+        "Lennox": "FrankGPT",
+        "Leo": "FrankGPT",
+        "Maximilian": "FrankGPT",
+        "Nayo": "FrankGPT",
+        "Simon": "FrankGPT"        
     };
     if (accounts[user] && accounts[user] === pass) {
         document.getElementById('login-overlay').style.display = 'none';
@@ -119,7 +119,7 @@ function sendMessage() {
       if (i === 0) {
         const placeholder = document.createElement("div");
         placeholder.classList.add("message", "frank");
-        placeholder.textContent = "\u200B"; // Zero-width space
+        placeholder.textContent = "\u200B";
         document.getElementById("chat-container").appendChild(placeholder);
         placeholder.scrollIntoView({ behavior: "smooth" });
         typeNextChar.placeholder = placeholder;
@@ -152,19 +152,20 @@ function normalizeText(text) {
     .replace(/ö/g, "oe")
     .replace(/ü/g, "ue")
     .replace(/ß/g, "ss")
-    .replace(/\s+/g, " ");
+    .replace(/\s+/g , " ")
+    .replace(/[,.;:!]/g, "");
 }
 
 function generateFrankResponse(userInput) {
   const userInputLower = normalizeText(userInput);
 
-  // --- Letzte Nachricht wiederholen ---
+  // Letzte Nachricht wiederholen
   if (/(wie bitte\??|wiederholen\??|nochmal sagen\??|erneut sagen\??|sie gesagt\??)/.test(userInputLower)) {
     if (lastFrankReply) {
       const reply = "Ich sagte: " + lastFrankReply;
       return reply;
     } else {
-      const reply = "Was soll ich wiederholen? Ich hab doch noch gar nichts gesagt.";
+      const reply = "Du hast mich genauestens verstanden.";
       return reply;
     }
   }
@@ -176,7 +177,7 @@ function generateFrankResponse(userInput) {
     return response;
   }
 
-  const isExplanation = ["erklären sie", "erzählen sie", "was passierte", "was bedeutet"].some(p => userInputLower.includes(p));
+  const isExplanation = ["erklären sie ", "erzählen sie ", "was passierte ", "was bedeutet ", "was ist ", "wer ist", "was heißt ", "was macht", "wofuer steht ", "fuer was steht "].some(p => userInputLower.includes(p));
   const isOpinion = [" finde", " denke", " glaube", "meiner meinung nach "].some(p => userInputLower.includes(p));
   const isQuestion = userInput.trim().endsWith("?");
 
@@ -246,24 +247,24 @@ function generateFrankResponse(userInput) {
     return response;
   }
 
-  if (isQuestion) {
-    response = searchBlock("question");
-    if (!(typeof response === "string" && response.trim() !== "")) response = searchBlock("reaction");
-    if (!(typeof response === "string" && response.trim() !== "")) response = fallbackResponse("question");
-    if (!(typeof response === "string" && response.trim() !== "")) response = fallbackResponse("reaction");
+  if (isExplanation) {
+    response = searchBlock("explanation");
+    if (!response) response = searchBlock("reaction");
+    if (!response) response = fallbackResponse("explanation");
+    if (!response) response = fallbackResponse("reaction");
   } else if (isOpinion) {
     response = searchBlock("opinion");
-    if (!(typeof response === "string" && response.trim() !== "")) response = searchBlock("reaction");
-    if (!(typeof response === "string" && response.trim() !== "")) response = fallbackResponse("opinion");
-    if (!(typeof response === "string" && response.trim() !== "")) response = fallbackResponse("reaction");
-  } else if (isExplanation) {
-    response = searchBlock("explanation");
-    if (!(typeof response === "string" && response.trim() !== "")) response = searchBlock("reaction");
-    if (!(typeof response === "string" && response.trim() !== "")) response = fallbackResponse("explanation");
-    if (!(typeof response === "string" && response.trim() !== "")) response = fallbackResponse("reaction");
+    if (!response) response = searchBlock("reaction");
+    if (!response) response = fallbackResponse("opinion");
+    if (!response) response = fallbackResponse("reaction");
+  } else if (isQuestion) {
+    response = searchBlock("question");
+    if (!response) response = searchBlock("reaction");
+    if (!response) response = fallbackResponse("question");
+    if (!response) response = fallbackResponse("reaction");
   } else {
     response = searchBlock("reaction");
-    if (!(typeof response === "string" && response.trim() !== "")) response = fallbackResponse("reaction");
+    if (!response) response = fallbackResponse("reaction");
   }
 
   if (typeof response === "string" && response.trim() !== "") {
@@ -271,12 +272,13 @@ function generateFrankResponse(userInput) {
     return response;
   }
 
-const simpleWords = ["ja", "ok", "verstehe", "gut", "stimmt", "nein", "ne", "hm", "vielleicht", "achso", "was", "wer", "wo"];
+const simpleWords = ["ja", "doch", "ok", "verstehe", "gut", "stimmt", "nein", "ne", "hm", "vielleicht", "achso", "was", "wer", "wo"];
 if (userInput.split(" ").length === 1 && simpleWords.includes(userInputLower)) {
   const oneWordMessagePool = [
     "Versuchst du, mit diesen halbherzigen Ein-Wort-Sätzen Jonathan nachzuahmen?",
     "Ein Wort? Mehr krieg ich heute nicht? Wie großzügig.",
-    "Wenn das alles ist, was du zu bieten hast, müssen wir wohl dringend an deinem Wortschatz arbeiten."
+    "Wenn das alles ist, was du zu bieten hast, müssen wir wohl dringend an deinem Wortschatz arbeiten.",
+    "Ein-Wort-Sätze sind was für Erstklässler. Bist du sicher, dass du hier richtig bist?"
   ];
   const response = getRandom(oneWordMessagePool);
   lastFrankReply = response;
@@ -299,7 +301,7 @@ if (userInput.split(" ").length === 1 && simpleWords.includes(userInputLower)) {
   const response = first + " " + second;
   lastFrankReply = response;
   return response;
-} else if (userInput.length > 80) {
+} else if (userInput.length > 60) {
   const longMessagePool = [
     "Keinen Grund, mir einen ganzen Vortrag zu halten.",
     "Ich werde nicht dafür bezahlt, mir deine ganze Lebensgeschichte anzuhören. Mach’s gerne kurz und schmerzlos."
