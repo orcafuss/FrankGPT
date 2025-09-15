@@ -36,7 +36,6 @@ const data = [
         responses: [
           "Ich nehme an, das »du« war ein Versehen. Möchtest du dich korrigieren?",
           "Versuch den Satz noch einmal – diesmal mit der angebrachten Anrede.",
-          "Mir war nicht klar, dass wir schon auf diesem Niveau angekommen sind. Zurück zur Höflichkeitsform, bitte.",
           "Ich bin nicht dein Kumpel. Ich bin dein Lehrer. Also sprich mich auch dementsprechend angemessen an.",
           "Wenn du so anfängst, hören wir mit dem Gespräch am besten gleich auf. Also reiß dich zusammen und unterlasse es, mich zu duzen."
         ]
@@ -183,7 +182,7 @@ const data = [
         ]
       },
       {
-        trigger: ["warum?"],
+        trigger: ["warum?", "wieso?", "weshalb?", "weswegen?"],
         responses: [
           "Weil ich es sage. Und das reicht als Grund vollkommen."
         ]

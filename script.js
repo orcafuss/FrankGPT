@@ -177,7 +177,7 @@ function generateFrankResponse(userInput) {
     return response;
   }
 
-  const isExplanation = ["erklären sie ", "erzählen sie ", "was passierte ", "was bedeutet ", "was ist ", "wer ist", "was heißt ", "was macht", "wofuer steht ", "fuer was steht "].some(p => userInputLower.includes(p));
+  const isExplanation = ["erklären sie ", "erlaeutern sie", "erzählen sie ", "was passierte ", "was bedeutet ", "was ist ", "wer ist", "was heißt ", "was macht", "wofuer steht ", "fuer was steht "].some(p => userInputLower.includes(p));
   const isOpinion = [" finde", " denke", " glaube", "meiner meinung nach "].some(p => userInputLower.includes(p));
   const isQuestion = userInput.trim().endsWith("?");
 
@@ -237,7 +237,6 @@ function generateFrankResponse(userInput) {
         }
       }
     }
-    console.log("DEBUG Kein Fallback gefunden für", type);
     return null;
   }
 
@@ -303,7 +302,7 @@ if (userInput.split(" ").length === 1 && simpleWords.includes(userInputLower)) {
   return response;
 } else if (userInput.length > 60) {
   const longMessagePool = [
-    "Keinen Grund, mir einen ganzen Vortrag zu halten.",
+    "Keinen Grund, mir einen ganzen Vortrag zu halten. Fass’ dich bitte kürzer.",
     "Ich werde nicht dafür bezahlt, mir deine ganze Lebensgeschichte anzuhören. Mach’s gerne kurz und schmerzlos."
   ];
   const response = getRandom(longMessagePool);
