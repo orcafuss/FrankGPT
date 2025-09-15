@@ -195,7 +195,7 @@ const data = [
         ]
       },
       {
-        trigger: ["wie spät", "wie viel uhr"],
+        trigger: ["wie spaet", "wie viel uhr"],
         responses: [
           "Weißt du, ein Blick auf die Uhr tut Wunder.",
           "Schau doch einfach mal auf die Uhr. Oder muss ich alles für dich erledigen?",
