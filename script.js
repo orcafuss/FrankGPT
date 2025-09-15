@@ -4,11 +4,7 @@ function login() {
     const error = document.getElementById('error');
     // Hartkodierte Login-Daten
     const accounts = {
-        "Lennox": "FrankGPT",
-        "Leo": "FrankGPT",
-        "Maximilian": "FrankGPT",
-        "Nayo": "FrankGPT",
-        "Simon": "FrankGPT"        
+        "Maximilian": "FrankGPT"
     };
     if (accounts[user] && accounts[user] === pass) {
         document.getElementById('login-overlay').style.display = 'none';
