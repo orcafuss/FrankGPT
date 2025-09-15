@@ -48,7 +48,7 @@ const data = [
         ]
       },
       {
-        trigger: ["scheiss", "kack", "arsch", "verpiss", "fick", "hure"],
+        trigger: ["scheiss", "kack", "arsch", "verpiss", "fick", "wichs", "hure", "fotze", "bastard", "behindert"],
         responses: [
           "Wenn das dein Niveau ist, dann ist ein Verweis vielleicht das Einzige, was noch hilft."
         ]
@@ -67,7 +67,7 @@ const data = [
         ]
       },
       {
-        trigger: ["verdammt", "idiot", "spinner", "dummkopf", "trottel", "dreck", "blöd"],
+        trigger: ["blöd", "dreck", "dummkopf", "hässlich", "idiot", "spinner", "trottel", "verdammt"],
         responses: [
           "Das ist keine für den Unterricht angemessene Sprache!",
           "Versuche mal, echte Argumente zu benutzen, anstatt sinnlos mit Schimpfwörtern um dich zu werfen.",
