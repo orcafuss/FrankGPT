@@ -1,8 +1,8 @@
 FrankGPT Version 1.2
 
-Lizens: [![CC BY 4.0][cc-by-shield]][cc-by]
+Lizenz: [![CC BY 4.0][cc-by-shield]][cc-by]
 
-Dieses Werk ist lizensiert unter einer
+Dieses Werk ist lizenziert unter einer
 [Creative Commons Namensnennung 4.0 International Lizenz][cc-by].
 
 [![CC BY 4.0][cc-by-image]][cc-by]
