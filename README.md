@@ -1,4 +1,4 @@
-Version 0.2
+FrankGPT Version 1.2
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
 
