@@ -4,7 +4,9 @@ function login() {
     const error = document.getElementById('error');
     // Hartkodierte Login-Daten
     const accounts = {
-        "Maximilian": "FrankGPT"
+        "Leo": "FrankTheTank_DDR",
+        "Maximilian": "FrankGPT",
+        "Simon": "S0zialis1ico4418!"
     };
     if (accounts[user] && accounts[user] === pass) {
         document.getElementById('login-overlay').style.display = 'none';
@@ -36,31 +38,31 @@ function greeting() {
   const generalPhrases = [
     ". Bist du heute wenigstens halbwegs vorbereitet?",
     ". Du schon wieder? Ich dachte, du lässt mich mal wenigstens einen Tag im Jahr in Ruhe.",
-    ". Ich hoffe, du hast dir den Hefteintrag der letzten Stunde gut durchgelesen.",
-    ". Ich erwarte heute mehr Verstand als gestern.",
-    ". Willst du dich heute auch mal melden?",
     ". Ich dachte, du wärst heute krank gemeldet. Tja, da hab’ ich mich wohl leider verlesen.",
+    ". Ich erwarte heute mehr Verstand als gestern.",
+    ". Ich hoffe, du hast dir den Hefteintrag der letzten Stunde gut durchgelesen.",
     ". Normalerweise schließt derjenige die Tür, der als letztes den Raum betritt.",
+    ". Willst du dich heute auch mal melden?"
   ];
   const morningPhrases = [
     ". Ausgeschlafen siehst du nicht gerade aus",
-    ", wer hat sich denn da aus dem Bett gequält?",
-    ", du bist auch mal wach geworden? Ich dachte schon, ich müsse dich persönlich abholen."
+    ", du bist auch mal wach geworden? Ich dachte schon, ich müsse dich persönlich abholen.",
+    ", wer hat sich denn da aus dem Bett gequält?"
   ];
   const noonPhrases = [
-    ". Ich hoffe, du hast einen triftigen Grund für dein Zuspätkommen.",
-    ". Hast du den Bus schon wieder verpasst?"
+    ". Hast du den Bus schon wieder verpasst?",
+    ". Ich hoffe, du hast einen triftigen Grund für dein Zuspätkommen."
   ];
   const eveningPhrases = [
     ", da bist du endlich. Ich warte schon den halben Tag auf dich, aber pünktlich warst du ja noch nie.",
-    ". Ich bin zwar noch da, aber erwarte ja keine Freundlichkeit mehr um diese Uhrzeit.",
-    ". Eigentlich ist mein Arbeitstag vorbei, aber was tut man nicht alles für die nächste Generation..."
+    ". Eigentlich ist mein Arbeitstag vorbei, aber was tut man nicht alles für die nächste Generation...",
+    ". Ich bin zwar noch da, aber erwarte ja keine Freundlichkeit mehr um diese Uhrzeit."
   ];
   const nightPhrases = [
-    "Was genau hast du um diese Uhrzeit noch hier verloren?",
-    "Was um alles in der Welt machst du um diese Uhrzeit noch hier?",
     "Ich hoffe, du hast einen wirklich guten Grund, um zu dieser Uhrzeit noch hier zu erscheinen.",
-    "Nachtschicht? Das wird ja ein Spaß."
+    "Nachtschicht? Das wird ja ein Spaß.",
+    "Was genau hast du um diese Uhrzeit noch hier verloren?",
+    "Was um alles in der Welt machst du um diese Uhrzeit noch hier?"
   ];
 
   const random = (arr) => arr[Math.floor(Math.random() * arr.length)];
@@ -101,9 +103,9 @@ function sendMessage() {
 
   // Tippverzögerung basierend auf Zeichenart bestimmen
   function getDelayForChar(char) {
-    if ([".", "!", "?", "\n"].includes(char)) {
+    if ([".","!","?","\n"].includes(char)) {
       return 220 + Math.random() * 180;
-    } else if ([",", "–"].includes(char)) {
+    } else if ([",","–"].includes(char)) {
       return 80 + Math.random() * 40;
     } else {
       return 30 + Math.random() * 10;
@@ -149,14 +151,14 @@ function normalizeText(text) {
     .replace(/ü/g, "ue")
     .replace(/ß/g, "ss")
     .replace(/\s+/g , " ")
-    .replace(/[,.;:!]/g, "");
+    .replace(/[,.;:!-]/g, "");
 }
 
 function generateFrankResponse(userInput) {
   const userInputLower = normalizeText(userInput);
 
   // Letzte Nachricht wiederholen
-  if (/(wie bitte\??|wiederholen\??|nochmal sagen\??|erneut sagen\??|sie gesagt\??)/.test(userInputLower)) {
+  if (/(erneut sagen\??|nochmal sagen\??|sie gesagt\??|wie bitte\??|wiederholen\??)/.test(userInputLower)) {
     if (lastFrankReply) {
       const reply = "Ich sagte: " + lastFrankReply;
       return reply;
@@ -167,14 +169,14 @@ function generateFrankResponse(userInput) {
   }
 
   // Begrüßungslogik auch bei Nutzerbegrüßungen anwenden
-  if (/(guten\s+(morgen|tag|vormittag|mittag|nachmittag|abend)|gute\s+nacht|gruess\s+gott|willkommen)/.test(userInputLower)) {
+  if (/(guten\s+(abend|mittag|morgen|nachmittag|vormittag|tag)|gruess\s+gott|gute\s+nacht|willkommen)/.test(userInputLower)) {
     const response = greeting();
     lastFrankReply = response;
     return response;
   }
 
-  const isExplanation = ["erklären sie ", "erlaeutern sie", "erzählen sie ", "was passierte ", "was bedeutet ", "was ist ", "wer ist", "was heißt ", "was macht", "wofuer steht ", "fuer was steht "].some(p => userInputLower.includes(p));
-  const isOpinion = [" finde", " denke", " glaube", "meiner meinung nach "].some(p => userInputLower.includes(p));
+  const isExplanation = ["erklären sie ","erlaeutern sie ","erzählen sie ","was passierte ","was bedeutet ","was ist ","wer ist ","was heißt ","was macht ","wofuer steht ","fuer was steht "].some(p => userInputLower.includes(p));
+  const isOpinion = [" denke"," glaube","ich finde","meiner meinung nach "].some(p => userInputLower.includes(p));
   const isQuestion = userInput.trim().endsWith("?");
 
   let response = null;
@@ -267,26 +269,26 @@ function generateFrankResponse(userInput) {
     return response;
   }
 
-const simpleWords = ["ja", "doch", "ok", "verstehe", "gut", "stimmt", "nein", "ne", "hm", "vielleicht", "achso", "was", "wer", "wo"];
+const simpleWords = ["achso","doch","gut","hm","ja","ne","nein","ok","stimmt","verstehe","vielleicht","was","wer","wo"];
 if (userInput.split(" ").length === 1 && simpleWords.includes(userInputLower)) {
   const oneWordMessagePool = [
-    "Versuchst du, mit diesen halbherzigen Ein-Wort-Sätzen Jonathan nachzuahmen?",
     "Ein Wort? Mehr krieg ich heute nicht? Wie großzügig.",
-    "Wenn das alles ist, was du zu bieten hast, müssen wir wohl dringend an deinem Wortschatz arbeiten.",
-    "Ein-Wort-Sätze sind was für Erstklässler. Bist du sicher, dass du hier richtig bist?"
+    "Ein-Wort-Sätze sind was für Erstklässler. Bist du sicher, dass du hier richtig bist?",
+    "Versuchst du, mit diesen halbherzigen Ein-Wort-Sätzen Jonathan nachzuahmen?",
+    "Wenn das alles ist, was du zu bieten hast, müssen wir wohl dringend an deinem Wortschatz arbeiten."
   ];
   const response = getRandom(oneWordMessagePool);
   lastFrankReply = response;
   return response;
 } else if (userInput.length <= 10) {
   const shortMessagePool = [
-    "Hat man dir nie beigebracht, vollständige Sätze zu bilden? Oder war das schon zu viel verlangt?",
     "Du darfst gerne mehr schreiben. Es kostet dich nichts.",
-    "Du tippst ja genau so brüchig wie die ersten Computer in der DDR!",
-    "Ein Satz besteht in der Regel aus Subjekt, Prädikat und Objekt. Nur falls du in der Grundschule nicht aufgepasst hast.",
-    "Ich unterrichte Deutsch, keine Hieroglyphen. Wir sind hier schließlich nicht im alten Ägypten.",
     "Du scheinst der deutschen Sprache nicht wirklich mächtig zu sein.",
-    "Du und die deutsche Sprache – das wirkt wie ein sehr loses Verhältnis."
+    "Du tippst ja genau so brüchig wie die ersten Computer in der DDR!",
+    "Du und die deutsche Sprache – das wirkt wie ein sehr loses Verhältnis.",
+    "Ein Satz besteht in der Regel aus Subjekt, Prädikat und Objekt. Nur falls du in der Grundschule nicht aufgepasst hast.",
+    "Hat man dir nie beigebracht, vollständige Sätze zu bilden? Oder war das schon zu viel verlangt?",
+    "Ich unterrichte Deutsch, keine Hieroglyphen. Wir sind hier schließlich nicht im alten Ägypten."
   ];
   let first = getRandom(shortMessagePool);
   let second = getRandom(shortMessagePool);
@@ -298,8 +300,8 @@ if (userInput.split(" ").length === 1 && simpleWords.includes(userInputLower)) {
   return response;
 } else if (userInput.length > 60) {
   const longMessagePool = [
+    "Ich werde nicht dafür bezahlt, mir deine ganze Lebensgeschichte anzuhören. Mach’s gerne kurz und schmerzlos.",
     "Keinen Grund, mir einen ganzen Vortrag zu halten. Fass’ dich bitte kürzer.",
-    "Ich werde nicht dafür bezahlt, mir deine ganze Lebensgeschichte anzuhören. Mach’s gerne kurz und schmerzlos."
   ];
   const response = getRandom(longMessagePool);
   lastFrankReply = response;
@@ -307,9 +309,9 @@ if (userInput.split(" ").length === 1 && simpleWords.includes(userInputLower)) {
 }
 
   const lastFallback = getRandom([
-    "Was das sein soll, weiß ich nicht – und ganz ehrlich: Ich will es wahrscheinlich auch gar nicht wissen.",
+    "Ich hab Besseres zu tun, als dir und deinen Märchengeschichten zuzuhören.",
     "Ich kann dir nicht helfen, wenn du mit Begriffen um dich wirfst, die nicht mal der Duden versteht.",
-    "Ich hab Besseres zu tun, als dir und deinen Märchengeschichten zuzuhören."
+    "Was das sein soll, weiß ich nicht – und ganz ehrlich: Ich will es wahrscheinlich auch gar nicht wissen."
   ]);
   lastFrankReply = lastFallback;
   return lastFallback;
