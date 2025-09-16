@@ -1,4 +1,4 @@
-FrankGPT Version 1.2
+# FrankGPT Version 1.2
 
 Lizenz: [![CC BY 4.0][cc-by-shield]][cc-by]
 
