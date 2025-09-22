@@ -74,7 +74,7 @@ const data = [
         ]
       },
       { // Verabschiedungen
-        trigger: ["bis bald","auf wiedersehen","schoenes wochenende","tschuess"],
+        trigger: ["auf wiedersehen","bis bald","gute nacht","schoenes wochenende","tschuess"],
         responses: [
           "Auf Wiedersehen. Glaub’ aber ja nicht, dass ich dir für die Höflichkeit eine gute mündliche Note eintrage.",
           "Auf Wiedersehen. Ich bin gespannt, ob du dir diesmal etwas gemerkt hast.",
@@ -267,6 +267,7 @@ const data = [
       },
       {
         trigger: ["warum","sie lehrer"],
+        match_all: true,
         responses: [
           "Ich wollte schon früh Lehrer werden. Bildung war mir wichtig – auch, weil ich gesehen habe, wie schnell man in einem System verdummt, das keine Fragen erlaubt. In der DDR war das mit dem Studium aber so eine Sache. Also hab ich erst mal auf dem Bau geschuftet, während andere mit den richtigen Beziehungen längst an der Uni saßen. Nach der Wende hab ich’s dann doch noch geschafft. Aber hätte ich gewusst, dass ich eines Tages solch undankbare Schüler wie dich unterrichten würde, hätte ich meine Karriere noch mal überdacht."
         ]
