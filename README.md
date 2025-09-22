@@ -1,9 +1,22 @@
-# FrankGPT Version 1.2
+# FrankGPT
+
+Ein einfacher, humorvoller Chatbot mit fortgeschrittener Trigger-Antwort-Logik.
 
 Lizenz: [![CC BY 4.0][cc-by-shield]][cc-by]
 
-Dieses Werk ist lizenziert unter einer
-[Creative Commons Namensnennung 4.0 International Lizenz][cc-by].
+## Struktur
+
+ˋindex.htmlˋ - Benutzeroberfläche der Website
+
+ˋscript.jsˋ - Zentrale Logik (Anmeldung, Begrüßung, Antworten auf Trigger, besondere Reaktionen)
+
+ˋdata.jsˋ - Alle Trigger-Antwort-Blöcke
+
+ˋstyle.cssˋ - Design der Benutzeroberfläche 
+
+## Lizenz
+
+Dieses Projekt steht unter einer [Creative Commons Attribution 4.0 International][cc-by]. Das bedeutet, dass der Code frei genutzt, geteilt und verändert werden darf, solange man eine Namensnennung macht.
 
 [![CC BY 4.0][cc-by-image]][cc-by]
 
