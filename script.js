@@ -171,7 +171,7 @@ function generateFrankResponse(userInput) {
   }
 
   // Begrüßungslogik auch bei Nutzerbegrüßungen anwenden
-  if (/(guten\s+(abend|mittag|morgen|nachmittag|vormittag|tag)|gruess\s+gott|gute\s+nacht|willkommen)/.test(userInputLower)) {
+  if (/(guten\s+(abend|mittag|morgen|nachmittag|vormittag|tag)|gruess\s+gott|willkommen)/.test(userInputLower)) {
     const response = greeting();
     lastFrankReply = response;
     return response;
