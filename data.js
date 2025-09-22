@@ -47,7 +47,7 @@ const data = [
         ]
       },
       { // Stark vulgäre Sprache
-        trigger: ["arsch","bastard","behindert","fick","fotze","hure","kack","scheiss","verpiss","wichs"],
+        trigger: ["arsch","bastard","behindert","fick","fotze","hure","kack","leck","nutte","penis","scheiss","schwanz","verpiss","wichs"],
         responses: [
           "Wenn das dein Niveau ist, dann ist ein Verweis vielleicht das Einzige, was noch hilft."
         ]
@@ -73,16 +73,10 @@ const data = [
           "Versuche mal, echte Argumente zu benutzen, anstatt sinnlos mit Schimpfwörtern um dich zu werfen."
         ]
       },
-      {
-        trigger: ["klo","pinkeln","pissen","toilette","wc"],
-        responses: [
-          "Das kann doch nicht dein Ernst sein... die Stunde hat erst vor zehn Minuten begonnen!"
-        ]
-      },
       { // Verabschiedungen
         trigger: ["bis bald","auf wiedersehen","schoenes wochenende","tschuess"],
         responses: [
-          "Auf Wiedersehen. Glaub aber ja nicht, dass ich dir für die Verabschiedung eine gute mündliche Note eintrage.",
+          "Auf Wiedersehen. Glaub’ aber ja nicht, dass ich dir für die Höflichkeit eine gute mündliche Note eintrage.",
           "Auf Wiedersehen. Ich bin gespannt, ob du dir diesmal etwas gemerkt hast.",
           "Na sieh mal einer an, immerhin bringst du es fertig, dich angebracht zu verabschieden. Das habe ich nicht von dir erwartet.",
           "Mach’s gut, und komm’ nächstes Mal pünktlich."
@@ -100,6 +94,12 @@ const data = [
         ]
       },
       {
+        trigger: ["klo","pinkeln","pissen","toilette","wc"],
+        responses: [
+          "Das kann doch nicht dein Ernst sein... die Stunde hat erst vor zehn Minuten begonnen!"
+        ]
+      },
+      { // Lachen
         trigger: ["ha ha","haha","lol"],
         responses: [
           "Machst du dich über mich lustig? Willst du unbedingt nachsitzen? Ich wollte dir ja entgegenkommen, aber du zeigst mir keinerlei Einsicht.",
@@ -124,7 +124,7 @@ const data = [
         ]
       },
       { // Jonathan
-        trigger: ["jonathan", "schlafmuetze"],
+        trigger: ["brillenschlange","jonathan","schlafmuetze"],
         responses: [
           "Der spricht ja nicht mal mit sich selbst. Was soll man da mögen?",
           "Er ist genau so groß wie seine Motivation im Unterricht. So wenig Engagement sieht man selten.",
@@ -134,15 +134,31 @@ const data = [
         ]
       },
       {
-        trigger: ["merkel"],
+        trigger_groups: [
+          ["stunde","aus"],
+          ["stunde","ende"],
+          ["stunde","um"],
+          ["stunde","vorbei"],
+          ["unterricht","aus"],
+          ["unterricht","ende"],
+          ["unterricht","um"],
+          ["unterricht","vorbei"]
+        ],
         responses: [
-          "Die war übrigens in der FDJ. Nur falls du’s vergessen hast. Manche Dinge kleben wie Plaste an den Händen."
+          "Ich beende den Unterricht, nicht die Klingel!",
+          "Wann die Stunde vorbei ist, entscheide immer noch ich."
         ]
       },
-      {
+      { // AfD
         trigger: [" afd","alternative fuer deutschland","weidel"],
         responses: [
           "Interessant, dass du dich damit beschäftigst. Ich empfehle Quellen jenseits von Telegram."
+        ]
+      },
+      {
+        trigger: ["merkel"],
+        responses: [
+          "Die war übrigens in der FDJ. Nur falls du’s vergessen hast. Manche Dinge kleben wie Plaste an den Händen."
         ]
       },
       {
@@ -208,6 +224,21 @@ const data = [
           "Kannst du nicht selbst nachschauen, wie spät es ist? Hast du kein Handy?",
           "Schau doch einfach mal auf die Uhr. Oder muss ich alles für dich erledigen?",
           "Weißt du, ein Blick auf die Uhr tut Wunder.",
+        ]
+      },
+      {
+        trigger_groups: [
+          ["stunde","aus"],
+          ["stunde","ende"],
+          ["stunde","um"],
+          ["stunde","vorbei"],
+          ["unterricht","aus"],
+          ["unterricht","ende"],
+          ["unterricht","um"],
+          ["unterricht","vorbei"]
+        ],
+        responses: [
+          "Deine Generation ist so ungeduldig. Ich beende den Unterricht, nicht die Klingel!"
         ]
       },
       {
@@ -300,7 +331,8 @@ const data = [
         match_all: true,
         responses: [
           "Hier ist der Witz des Tages: Ihr habt einmal eure Hausaufgaben gemacht. Ha ha.",
-          "Warum gab es in der DDR keine Raubüberfälle? Weil es sowieso nichts zu holen gab."
+          "Warum gab es in der DDR keine Raubüberfälle? Weil es sowieso nichts zu holen gab.",
+          "Was ist die längste Schlange in der DDR? Die Warteschlange vor dem Kaufhaus."
         ]
       },
       {

@@ -42,15 +42,16 @@ function greeting() {
     ". Ich erwarte heute mehr Verstand als gestern.",
     ". Ich hoffe, du hast dir den Hefteintrag der letzten Stunde gut durchgelesen.",
     ". Normalerweise schließt derjenige die Tür, der als letztes den Raum betritt.",
+    ". Vielleicht nutzen wir ihn diesmal sinnvoll.",
     ". Willst du dich heute auch mal melden?"
   ];
   const morningPhrases = [
-    ". Ausgeschlafen siehst du nicht gerade aus",
+    ". Ausgeschlafen siehst du nicht gerade aus.",
     ", du bist auch mal wach geworden? Ich dachte schon, ich müsse dich persönlich abholen.",
     ", wer hat sich denn da aus dem Bett gequält?"
   ];
   const noonPhrases = [
-    ". Hast du den Bus schon wieder verpasst?",
+    ". Hast du schon wieder den Bus verpasst?",
     ". Ich hoffe, du hast einen triftigen Grund für dein Zuspätkommen."
   ];
   const eveningPhrases = [
@@ -62,6 +63,7 @@ function greeting() {
     "Ich hoffe, du hast einen wirklich guten Grund, um zu dieser Uhrzeit noch hier zu erscheinen.",
     "Nachtschicht? Das wird ja ein Spaß.",
     "Was genau hast du um diese Uhrzeit noch hier verloren?",
+    "Was treibt dich um diese Uhrzeit noch vor den Bildschirm?",
     "Was um alles in der Welt machst du um diese Uhrzeit noch hier?"
   ];
 
@@ -175,7 +177,7 @@ function generateFrankResponse(userInput) {
     return response;
   }
 
-  const isExplanation = ["erklären sie ","erlaeutern sie ","erzählen sie ","was passierte ","was bedeutet ","was ist ","wer ist ","was heißt ","was macht ","wofuer steht ","fuer was steht "].some(p => userInputLower.includes(p));
+  const isExplanation = ["erklaeren sie","erlaeutern sie","erzaehlen sie","was passierte ","was bedeutet ","was ist ","wer ist ","was heißt ","was macht ","wofuer steht ","fuer was steht "].some(p => userInputLower.includes(p));
   const isOpinion = [" denke"," glaube","ich finde","meiner meinung nach "].some(p => userInputLower.includes(p));
   const isQuestion = userInput.trim().endsWith("?");
 
@@ -272,8 +274,10 @@ function generateFrankResponse(userInput) {
 const simpleWords = ["achso","doch","gut","hm","ja","ne","nein","ok","stimmt","verstehe","vielleicht","was","wer","wo"];
 if (userInput.split(" ").length === 1 && simpleWords.includes(userInputLower)) {
   const oneWordMessagePool = [
+    "Ein Wort? Mehr hast du nicht drauf?",
     "Ein Wort? Mehr krieg ich heute nicht? Wie großzügig.",
     "Ein-Wort-Sätze sind was für Erstklässler. Bist du sicher, dass du hier richtig bist?",
+    "Versuch’ es mal mit einem ganzen Satz.",
     "Versuchst du, mit diesen halbherzigen Ein-Wort-Sätzen Jonathan nachzuahmen?",
     "Wenn das alles ist, was du zu bieten hast, müssen wir wohl dringend an deinem Wortschatz arbeiten."
   ];
