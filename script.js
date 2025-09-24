@@ -4,6 +4,7 @@ function login() {
     const error = document.getElementById('error');
     // Hartkodierte Login-Daten
     const accounts = {
+        "Keknan": "KamelSack32",
         "Leo": "FrankTheTank_DDR",
         "Maximilian": "FrankGPT",
         "Simon": "S0zialis1ico4418!"
@@ -320,3 +321,4 @@ if (userInput.split(" ").length === 1 && simpleWords.includes(userInputLower)) {
   lastFrankReply = lastFallback;
   return lastFallback;
 }
+
