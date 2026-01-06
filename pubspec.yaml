@@ -1,0 +1,48 @@
+name: frankgpt
+description: "FrankGPT"
+publish_to: 'none'
+
+version: 1.0.0
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  flutter_svg: ^2.2.1
+  yaml: ^3.1.2
+  path_provider: ^2.0.17
+  window_manager: ^0.5.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/data/formal_responses.yaml
+    - assets/data/informal_responses.yaml
+
+    - assets/icons/chat/menu.svg
+    - assets/icons/chat/new_chat.svg
+    - assets/icons/chat/send.svg
+    - assets/icons/settings/audio_lines.svg
+    - assets/icons/settings/film.svg
+    - assets/icons/settings/paintbrush.svg
+    - assets/icons/settings/palette.svg
+    - assets/icons/settings/sun.svg
+    - assets/icons/system/back.svg
+    - assets/icons/system/check.svg
+    - assets/icons/system/settings.svg
+
+    - assets/icons/system/dropdown.svg
+
+    - lib/scripts/settings.json
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf

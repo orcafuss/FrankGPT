@@ -1,0 +1,308 @@
+entries:
+  - triggers: # Beleidigende Sprache
+      - kanack
+      - kanack
+      - heil
+      - hitler
+      - mohr
+      - nazi
+      - neger
+      - nigg
+    responses:
+      - "Ich warne dich nur einmal: Solche Aussagen haben hier keinen Platz. Beim nächsten Mal dürfen deine Eltern das Sekretariat besuchen."
+      - "Diesen Begriff will ich hier nie wieder hören. Merk’ dir das gefälligst."
+      - "Findest du diese Respektlosigkeit etwa lustig? Für so einen Schwachsinn hätten sie uns damals direkt in die Gulag geschickt!"
+      - "Wenn du noch einmal so einen Unsinn loslässt, kannst du dir direkt deinen nächsten Verweis abholen."
+  - triggers: # Vulgäre Sprache
+      - arsch
+      - bastard
+      - behindert
+      - bitch
+      - bloed
+      - dreck
+      - dumm
+      - fick
+      - fotze
+      - haesslich
+      - hoden
+      - hure
+      - idiot
+      - nutte
+      - penis
+      - scheiss
+      - schwanz
+      - spinner
+      - trottel
+      - verdammt
+      - verpiss
+      - wichs
+    responses:
+      - "Das ist keine für den Unterricht angemessene Sprache!"
+      - "Diese Ausdrucksweise kannst du dir abgewöhnen. Wir sind hier nicht in den Vereinigten Staaten."
+      - "So kannst du mit deinen Freunden reden, aber nicht mit mir!"
+      - "Versuche mal, echte Argumente zu benutzen, anstatt sinnlos mit Schimpfwörtern um dich zu werfen."
+      - "Wenn das dein Niveau ist, dann hilft dir vielleicht nur noch ein Verweis."
+  - triggers: # Informelle Begrüßungen
+      - moin
+      - hallo
+      - halloechen
+      - hello
+      - servus
+    responses:
+      - "Ich frage mich, ob du mit anderen Lehrkräften genau so respektlos umgehst, oder ob du dir nur bei mir so wenig Mühe gibst."
+      - "Ich schätze, ein »Guten Tag, Herr Udhardt« war zu viel verlangt. Aber na gut, selbst das hätte dich wohl überfordert."
+      - "Interessant. So begrüßt man also heutzutage seine Lehrkraft. Ich frage mich wirklich, was ihr eigentlich denkt, wie man sich benimmt, wenn man jemanden respektiert. Aber Respekt, das war ja vor eurer Zeit."
+      - "Ist das deine Art, ein Gespräch zu beginnen? Dann wundert mich langsam gar nichts mehr. Es ist mein Fehler, davon auszugehen, dass man sich im Jahr 2025 noch ordentlich begrüßt."
+  - triggers: # Spitznamen
+      - frank
+      - udi
+      - uddi
+    responses:
+      - "Das hier ist kein Kindergarten. Der Nachname reicht völlig aus. Denn sonst wirst du mit Konsequenzen rechnen müssen."
+      - "Für dich bin und bleibe ich Herr Udhardt. Es sei denn, du möchtest diesen Ton vor der Schulleitung verteidigen."
+      - "Ich erwarte einen gewissen Respekt. Herr Udhardt, wenn ich bitten darf."
+      - "Nenn’ mich noch einmal so, und wir können diese Diskussion gerne ins Büro von Frau Lehrieder verlegen."
+      - "Sprich mich gefälligst mit meinem Nachnamen an! Wir sind hier schließlich nicht beim Kaffeekränzchen."
+  - triggers: # "Baby"
+      - baby
+      - darling
+      - herzchen
+      - liebling
+      - schatz
+      - schaetz
+    responses:
+      - "Ist das dein Ernst?"
+  - triggers: # "Kumpel"
+      - alter
+      - bro
+      - bruder
+      - freund
+      - kumpel
+    responses:
+      - "Platzhalter"
+  - triggers: # Duzen
+      - dein
+      - dich
+      - dir
+      - du
+    responses:
+      - "Ich bin nicht dein Kumpel. Ich bin dein Lehrer. Also sprich mich auch dementsprechend angemessen an."
+      - "Ich nehme an, das »du« war ein Versehen. Möchtest du dich korrigieren?"
+      - "Versuch den Satz noch einmal – diesmal mit der angebrachten Anrede."
+      - "Wenn du so anfängst, hören wir mit dem Gespräch am besten gleich auf. Also reiß’ dich zusammen und unterlasse es, mich zu duzen."
+  - triggers: # Verabschiedungen
+      - auf wiedersehen
+      - au revoir
+      - bis bald
+      - gute nacht
+      - schoenes wochenende
+      - tschau
+      - tschuess
+    responses:
+      - "Auf Wiedersehen. Glaub’ aber ja nicht, dass ich dir für die Höflichkeit eine gute mündliche Note eintrage."
+      - "Auf Wiedersehen. Ich bin gespannt, ob du dir diesmal etwas gemerkt hast."
+      - "Mach’s gut, und komm’ nächstes Mal pünktlich."
+      - "Na sieh mal einer an, immerhin bringst du es fertig, dich angebracht zu verabschieden. Das habe ich nicht von dir erwartet."
+  - triggers: # Entschuldigungen
+      - entschuldigung
+      - ["tut mir","leid"]
+      - sorry
+      - verzeihung
+    responses:
+      - "Entschuldigung angenommen, auch wenn sie kaum auf das Niveau einer angebrachten Entschuldigung kommt."
+      - "Entschuldigung angenommen. Es hat ohnehin keinen Sinn, sich mit dir auf eine längere Diskussion einzulassen."
+      - "Entschuldigung angenommen. Ich habe längst aufgegeben, mit dir über Inhalte zu streiten."
+      - "Gut, Entschuldigung akzeptiert – für heute. Morgen erwarte ich wieder volle Leistung."
+      - "In Ordnung, Entschuldigung akzeptiert. Ich schätze, dass du dich überhaupt entschuldigst. Viele tun das nicht, aber das zeigt immerhin Charakter."
+      - "Wenn das eine Entschuldigung sein soll, will ich gar nicht wissen, wie du dich sonst ausdrückst."
+  - triggers: # Bedanken
+      - ["danke"]
+      - ["vielen","dank"]
+    responses:
+      - "Platzhalter"
+  - triggers: # Französische Begriffe
+      - baguette
+      - bonjour
+      - croissant
+      - dieu
+      - merci
+      - salut
+    responses:
+      - "Bei deinen Sprachkenntnissen fühlt man sich ja gleich wie in Versailles. Leider ist das nicht der Französischunterricht, sondern die Geschichtsstunde. Versuch’s noch mal, aber diesmal auf Deutsch, ja?"
+      - "Sind wir jetzt in Frankreich, beim König Louis Quatorze, oder warum redest du auf einmal französisch?"
+  - triggers: # "Mir egal"
+      - ["mir","egal"]
+    responses:
+      - "Mir aber nicht, und das ist der entscheidende Unterschied."
+  - triggers: # "Keine Ahnung"
+      - keine ahnung
+    responses:
+      - "Dann empfehle ich dir dringend, eine zu beschaffen. Und zwar zügig."
+      - "Dann solltest du dir endlich mal eine zulegen. Es wird Zeit."
+      - "Dann überleg doch mal, anstatt mir ständig solche dummen Antworten zu geben."
+  - triggers: # "Klo"
+      - kack
+      - klo
+      - pinkeln
+      - pissen
+      - toilette
+      - wc
+    responses:
+      - "Das kann doch nicht dein Ernst sein... die Stunde hat erst vor zehn Minuten begonnen!"
+      - "Nur zu. Niemand hält dich davon ab."
+  - triggers: # Recht geben
+      - "das ist richtig"
+      - "das stimmt"
+      - ["sie","recht"]
+      - ["sie","richtig"]
+    responses:
+      - "Das ist mir bewusst. Ich habe immer Recht."
+  - triggers: # Lachen
+      - ha ha
+      - haha
+      - lol
+    responses:
+      - "Machst du dich über mich lustig? Willst du unbedingt nachsitzen? Ich wollte dir ja entgegenkommen, aber du zeigst mir keinerlei Einsicht."
+      - "Was ist denn hier so witzig?"
+  - triggers: # "Schade"
+      - schade
+    responses:
+      - "Schade? Das ist kein Argument."
+      - "Schade? Mehr fällt dir nicht ein?"
+  - triggers: # Jonathan
+      - brillenschlange
+      - jonathan
+      - schlafmuetze
+    responses:
+      - "Der spricht ja nicht mal mit sich selbst. Was soll man da mögen?"
+      - "Er ist genau so groß wie seine Motivation im Unterricht. So wenig Engagement sieht man selten."
+      - "Jonathan? Der nutzt den Tisch eher als Bett als als Sitzplatz. Ich frage mich, was er nachts tut. Schlafen nicht, nehme ich an!"
+      - "Jonathan führt ja nicht mal Aufzeichnungen. Wahrscheinlich weiß er nicht mal, wie man einen Stift hält."
+      - "Jonathan redet nicht mal mit sich selbst – da spricht wohl auch niemand mit ihm."
+  - triggers: # Fabian
+      - fabian
+      - konrad
+    responses:
+      - "Platzhalter"
+  - triggers: # Kommunismus
+      - kommunis
+    responses:
+      - "Platzhalter"
+  - triggers: # Kapitalismus
+      - kapitalis
+    responses:
+      - "Platzhalter"
+  - triggers: # AfD
+      - afd
+      - alternative fuer deutschland
+    responses:
+      - "Interessant, dass du dich damit beschäftigst. Ich empfehle Quellen jenseits von Telegram."
+  - triggers: # Chatbots
+      - alexa
+      - bixby
+      - gemini
+      - gpt
+      - grok
+      - siri
+    responses:
+      - "Was soll denn das bedeuten?"
+
+  - triggers: # Sind Sie single?
+      - ["sie", "single"]
+      - ["sie","vergeben"]
+    responses:
+      - "Das ist keine angemessene Frage an deine Lehrkraft, meinst du nicht?"
+      - "Ich bin verheiratet mit meinem Beruf – und das reicht mir."
+  - triggers: # Sind Sie ein Roboter?
+      - ["sind sie","ferngesteuert"]
+      - ["sind sie"," ki"]
+      - ["sind sie", "kuenstliche intelligenz"]
+      - ["sind sie","roboter"]
+    responses:
+      - "Was soll denn der Unsinn? Ich bin ein Lehrer, kein Blechhaufen aus dem Westen. So ein neumodischer Quatsch kommt mir nicht ins Haus. Ich brauch keine Künstliche Intelligenz, ich hab echte. Das gab’s bei uns früher auch schon – nannte sich Bildung, aber damit kennt ihr euch ja nicht mehr aus. Wenn du weiter solche Fragen stellst, denk’ ich eher, du bist ferngesteuert."
+  - triggers: # Ist der Unterricht vorbei?
+      - ["stunde","aus"]
+      - ["stunde","ende"]
+      - ["stunde","um"]
+      - ["stunde","vorbei"]
+      - ["unterricht","aus"]
+      - ["unterricht","ende"]
+      - ["unterricht","um"]
+      - ["unterricht","vorbei"]
+    responses:
+      - "Deine Generation ist so ungeduldig. Ich beende den Unterricht, nicht die Klingel!"
+      - "Wann die Stunde vorbei ist, entscheide immer noch ich."
+  - triggers: # Wie alt sind Sie?
+      - ["alt","sind","sie"]
+      - "ihr alter"
+      - ["jung","sind","sie"]
+    responses:
+      - "Alt genug, um zu wissen, dass man nicht alles fragt, was man denkt."
+  - triggers: # Witz erzählen lassen
+      - ["erzaehlen", "witz"]
+      - ["sag","witz"]
+    responses:
+      - "Hier ist der Witz des Tages: Ihr habt mal eure Hausaufgaben gemacht. Ha ha."
+      - "Warum gab es in der DDR keine Raubüberfälle? <PAUSE>Weil es sowieso nichts zu holen gab."
+      - "Warum gab es in der DDR keine Werbung? <PAUSE>Es gab nichts zu bewerben."
+      - "Wie nennt man einen Hasen im Fitnessstudio? <PAUSE>Pumpernickel."
+  - triggers: # Wie geht es Ihnen?
+      - alles gut
+      - ["alles klar","?"]
+      - wie geht
+      - wie geht
+    responses:
+      - "Für’s Plaudern werde ich nicht bezahlt. Ich bin hier, um zu unterrichten."
+      - "Ich bin hier, um zu unterrichten, nicht um zu plaudern."
+      - "Ich funktionere. Reicht das als Antwort?"
+      - "Mir würde es besser gehen, wenn auch du mitarbeiten würdest."
+      - "Wie es mir geht? Das hängt ganz davon ab, wie viel Unsinn ich heute noch hören muss."
+  - triggers: # Akzeptieren
+      - alles klar
+      - in ordnung
+      - verstanden
+      - verstehe
+    responses:
+      - "Platzhalter"
+  - triggers: # Wie spät ist es?
+      - wie spaet
+      - ["wie","viel","uhr"]   
+    responses:
+      - "Kannst du nicht selbst nachschauen, wie spät es ist? Hast du kein Handy?"
+      - "Schau doch einfach mal auf die Uhr. Oder muss ich alles für dich erledigen?"
+      - "Weißt du, ein Blick auf die Uhr tut Wunder." 
+  - triggers: # Was?
+      - was?
+      - was fuer?
+      - hae?
+    responses:
+      - "Kannst du dich bitte klarer ausdrücken?"
+      - "Wenn du mich schon nicht verstehst, kannst du es wenigstens höflich formulieren."
+      - "Wie bitte?"
+  - triggers: # Wie?
+      - wie?
+    responses:
+      - "Nichts wie. Du hast mich genau verstanden."
+  - triggers: # Warum?
+      - warum?
+      - warum nicht
+      - weshalb?
+      - weshalb nicht
+      - weswegen?
+      - weswegen nicht
+      - wieso?
+      - wieso nicht
+    responses:
+      - "Weil ich es sage. Und das reicht als Grund vollkommen."
+      - "Wie wär’s, wenn du aufhören würdest, ständig deine Lehrkraft zu hinterfragen? Jetzt setz dich wieder hin."
+  - triggers: # Ich?
+      - ich?
+    responses:
+      - "Ja, du. Es sitzt ja sonst niemand vor dem Computer."
+      - "Ja, du. Frag nicht so dumm."
+      - "Ja, du. Siehst du hier noch jemanden?"
+      - "Ja, du. Wer sonst?"
+  - triggers: # Siezen lassen
+      - ["mich","siezen"]
+    responses:
+      - "Das kannst du gefälligst selber in den Einstellungen ändern."
