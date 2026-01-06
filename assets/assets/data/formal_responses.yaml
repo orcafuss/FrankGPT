@@ -1,0 +1,286 @@
+entries:
+  - triggers: # Beleidigende Sprache
+      - kanack
+      - kanack
+      - heil
+      - hitler
+      - mohr
+      - nazi
+      - neger
+      - nigg
+    responses:
+      - "Ich warne Sie nur einmal: Solche Aussagen haben hier keinen Platz. Beim nächsten Mal dürfen Ihre Eltern das Sekretariat besuchen."
+      - "Diesen Begriff will ich hier nie wieder hören. Merken Sie sich das gefälligst."
+      - "Finden Sie diese Respektlosigkeit etwa lustig? Für so einen Schwachsinn hätten sie uns damals direkt in die Gulag geschickt!"
+      - "Wenn Sie noch einmal so einen Unsinn loslassen, können Sie sich direkt Ihren nächsten Verweis abholen."
+  - triggers: # Vulgäre Sprache
+      - arsch
+      - bastard
+      - behindert
+      - bitch
+      - bloed
+      - dreck
+      - dumm
+      - fick
+      - fotze
+      - haesslich
+      - idiot
+      - nutte
+      - penis
+      - scheiss
+      - schwanz
+      - spinner
+      - trottel
+      - verdammt
+      - verpiss
+      - wichs
+    responses:
+      - "Das ist keine für den Unterricht angemessene Sprache!"
+      - "So können Sie mit Ihren Freunden reden, aber nicht mit mir!"
+      - "Versuchen Sie mal, echte Argumente zu benutzen, anstatt sinnlos mit Schimpfwörtern um sich zu werfen."
+      - "Wenn das Ihr Niveau ist, dann ist ein Verweis vielleicht das Einzige, was noch hilft."
+  - triggers: # Informelle Begrüßungen
+      - moin
+      - hallo
+      - halloechen
+      - hello
+      - servus
+    responses:
+      - "Ich frage mich, ob Sie mit anderen Lehrkräften genau so respektlos umgehen, oder ob Sie sich nur bei mir so wenig Mühe geben."
+      - "Ich schätze, ein »Guten Tag, Herr Udhardt« war zu viel verlangt. Aber na gut, selbst das hätte Sie wohl überfordert."
+      - "Interessant. So begrüßt man also heutzutage seine Lehrkraft. Ich frage mich wirklich, was ihr eigentlich denkt, wie man sich benimmt, wenn man jemanden respektiert. Aber Respekt, das war ja vor eurer Zeit."
+      - "Ist das Ihre Art, ein Gespräch zu beginnen? Dann wundert mich langsam gar nichts mehr. Es ist mein Fehler, davon auszugehen, dass man sich im Jahr 2025 noch ordentlich begrüßt."
+  - triggers: # Spitznamen
+      - frank
+      - udi
+      - uddi
+    responses:
+      - "Das hier ist kein Kindergarten. Der Nachname reicht völlig aus. Denn sonst werden Sie mit Konsequenzen rechnen müssen."
+      - "Für Sie bin und bleibe ich Herr Udhardt. Es sei denn, Sie m;chten diesen Ton vor der Schulleitung verteidigen."
+      - "Ich erwarte einen gewissen Respekt. Herr Udhardt, wenn ich bitten darf."
+      - "Nennen Sie mich noch einmal so, und wir können diese Diskussion gerne ins Büro von Frau Lehrieder verlegen."
+      - "Sprechen Sie mich gefälligst mit meinem Nachnamen an! Wir sind hier schließlich nicht beim Kaffeekränzchen."
+  - triggers: # "Baby"
+      - baby
+      - darling
+      - herzchen
+      - liebling
+      - schatz
+      - schaetz
+    responses:
+      - "Ist das Ihr Ernst?"
+  - triggers: # "Kumpel"
+      - alter
+      - bro
+      - bruder
+      - freund
+      - kumpel
+    responses:
+      - "Platzhalter"
+  - triggers: # Duzen
+      - dein
+      - dich
+      - dir
+      - du
+    responses:
+      - "Ich bin nicht Ihr Kumpel. Ich bin Ihr Lehrer. Also sprechen Sie mich auch dementsprechend angemessen an."
+      - "Ich nehme an, das »du« war ein Versehen. Möchten Sie sich korrigieren?"
+      - "Versuchen Sie den Satz noch einmal – diesmal mit der angebrachten Anrede."
+      - "Wenn Sie so anfangen, hören wir mit dem Gespräch am besten gleich auf. Also reißen Sie sich zusammen und unterlassen Sie es, mich zu duzen."
+  - triggers: # Verabschiedungen
+      - auf wiedersehen
+      - au revoir
+      - bis bald
+      - gute nacht
+      - schoenes wochenende
+      - tschau
+      - tschuess
+    responses:
+      - "Auf Wiedersehen. Glaub’ aber ja nicht, dass ich Ihnen für die Höflichkeit eine gute mündliche Note eintrage."
+      - "Auf Wiedersehen. Ich bin gespannt, ob Sie sich diesmal etwas gemerkt haben."
+      - "Mach’s gut, und kommen Sie nächstes Mal pünktlich."
+      - "Na sieh mal einer an, immerhin bringen Sie es fertig, sich angebracht zu verabschieden. Das habe ich nicht von Ihnen erwartet."
+  - triggers: # Entschuldigungen
+      - entschuldigung
+      - ["tut mir","leid"]
+      - sorry
+      - verzeihung
+    responses:
+      - "Entschuldigung angenommen, auch wenn sie kaum auf das Niveau einer angebrachten Entschuldigung kommt."
+      - "Entschuldigung angenommen. Es hat ohnehin keinen Sinn, sich mit Ihnen auf eine längere Diskussion einzulassen."
+      - "Entschuldigung angenommen. Ich habe längst aufgegeben, mit Ihnen über Inhalte zu streiten."
+      - "Gut, Entschuldigung akzeptiert – für heute. Morgen erwarte ich wieder volle Leistung."
+      - "In Ordnung, Entschuldigung akzeptiert. Ich schätze, dass Sie sich überhaupt entschuldigen. Viele tun das nicht, aber das zeigt immerhin Charakter."
+      - "Wenn das eine Entschuldigung sein soll, will ich gar nicht wissen, wie Sie sich sonst ausdrücken."
+  - triggers: # Bedanken
+      - ["danke"]
+      - ["vielen","dank"]
+    responses:
+      - "Platzhalter"
+  - triggers: # Französische Begriffe
+      - baguette
+      - bonjour
+      - croissant
+      - dieu
+      - merci
+      - salut
+    responses:
+      - "Bei Ihren Sprachkenntnissen fühlt man sich ja gleich wie in Versailles. Leider ist das nicht der Französischunterricht, sondern die Geschichtsstunde. Versuchen Sie’s noch mal, aber diesmal auf Deutsch, ja?"
+      - "Sind wir jetzt in Frankreich, beim König Louis Quatorze, oder warum reden Sie auf einmal französisch?"
+  - triggers: # Akzeptieren
+      - alles klar
+      - in ordnung
+      - verstanden
+      - verstehe
+    responses:
+      - "Platzhalter"
+  - triggers: # "Mir egal"
+      - ["mir","egal"]
+    responses:
+      - "Mir aber nicht, und das ist der entscheidende Unterschied."
+  - triggers: # "Keine Ahnung"
+      - keine ahnung
+    responses:
+      - "Dann sollten Sie sich endlich mal eine zulegen. Es wird Zeit."
+      - "Dann überlegen Sie doch mal, anstatt mir ständig solche dummen Antworten zu geben."
+  - triggers: # "Klo"
+      - kack
+      - klo
+      - pinkeln
+      - pissen
+      - toilette
+      - wc
+    responses:
+      - "Das kann doch nicht Ihr Ernst sein... die Stunde hat erst vor zehn Minuten begonnen!"
+  - triggers: # "Sie haben Recht"
+      - ["sie","recht"]
+      - ["sie","richtig"]
+    responses:
+      - "Schön, dass Sie das auch endlich mal begreifen. Hat ja lange genug gedauert."
+  - triggers: # Lachen
+      - ha ha
+      - haha
+      - lol
+    responses:
+      - "Machen Sie sich über mich lustig? Wollen Sie unbedingt nachsitzen? Ich wollte Ihnen ja entgegenkommen, aber Sie zeigen mir keinerlei Einsicht."
+      - "Was ist denn hier so witzig?"
+  - triggers: # "Schade"
+      - schade
+    responses:
+      - "Platzhalter"
+  - triggers: # Jonathan
+      - brillenschlange
+      - jonathan
+      - schlafmuetze
+    responses:
+      - "Der spricht ja nicht mal mit sich selbst. Was soll man da mögen?"
+      - "Er ist genau so groß wie seine Motivation im Unterricht. So wenig Engagement sieht man selten."
+      - "Jonathan? Der nutzt den Tisch eher als Bett als als Sitzplatz. Ich frage mich, was er nachts tut. Schlafen nicht, nehme ich an!"
+      - "Jonathan führt ja nicht mal Aufzeichnungen. Wahrscheinlich weiß er nicht mal, wie man einen Stift hält."
+      - "Jonathan redet nicht mal mit sich selbst – da spricht wohl auch niemand mit ihm."
+  - triggers: # Fabian
+      - fabian
+      - konrad
+    responses:
+      - "Platzhalter"
+  - triggers: # Kommunismus
+      - kommunis
+    responses:
+      - "Platzhalter"
+  - triggers: # Kapitalismus
+      - kapitalis
+    responses:
+      - "Platzhalter"
+  - triggers: # AfD
+      - afd
+      - alternative fuer deutschland
+    responses:
+      - "Interessant, dass Sie sich damit beschäftigen. Ich empfehle Quellen jenseits von Telegram."
+  - triggers: # Chatbots
+      - alexa
+      - bixby
+      - gemini
+      - gpt
+      - grok
+      - siri
+    responses:
+      - "Was soll denn das bedeuten?"
+
+  - triggers: # Sind Sie single?
+      - ["sie", "single"]
+      - ["sie","vergeben"]
+    responses:
+      - "Ich bin verheiratet mit meinem Beruf – und das reicht mir."
+  - triggers: # Sind Sie ein Roboter?
+      - ["sind sie","ferngesteuert"]
+      - ["sind sie"," ki"]
+      - ["sind sie", "kuenstliche intelligenz"]
+      - ["sind sie","roboter"]
+    responses:
+      - "Was soll denn der Unsinn? Ich bin ein Lehrer, kein Blechhaufen aus dem Westen. So ein neumodischer Quatsch kommt mir nicht ins Haus. Ich brauch keine Künstliche Intelligenz, ich hab echte. Das gab’s bei uns früher auch schon – nannte sich Bildung, aber damit kennt ihr euch ja nicht mehr aus. Wenn Sie weiter solche Fragen stellen, denk’ ich eher, Sie sind ferngesteuert."
+  - triggers: # Ist der Unterricht vorbei?
+      - ["stunde","aus"]
+      - ["stunde","ende"]
+      - ["stunde","um"]
+      - ["stunde","vorbei"]
+      - ["unterricht","aus"]
+      - ["unterricht","ende"]
+      - ["unterricht","um"]
+      - ["unterricht","vorbei"]
+    responses:
+      - "Ihre Generation ist so ungeduldig. Ich beende den Unterricht, nicht die Klingel!"
+      - "Wann die Stunde vorbei ist, entscheide immer noch ich."
+  - triggers: # Wie alt sind Sie?
+      - ["alt","sind","sie"]
+      - ["jung","sind","sie"]
+    responses:
+      - "Alt genug, um zu wissen, dass man nicht alles fragt, was man denkt."
+  - triggers: # Witz erzählen lassen
+      - ["erzaehlen", "witz"]
+      - ["sag","witz"]
+    responses:
+      - "Hier ist der Witz des Tages: Ihr habt mal eure Hausaufgaben gemacht. Ha ha."
+      - "Warum gab es in der DDR keine Raubüberfälle? Weil es sowieso nichts zu holen gab."
+  - triggers: # Wie geht es Ihnen?
+      - alles gut
+      - ["alles klar","?"]
+      - wie geht
+    responses:
+      - "Ich bin hier, um zu unterrichten, nicht um zu plaudern."
+      - "Ich funktionere. Reicht das als Antwort?"
+      - "Mir würde es besser gehen, wenn auch Sie sich konzentrieren würden."
+      - "Wie es mir geht? Nun, das hängt ganz davon ab, wie viel Unsinn ich heute noch hören muss."
+  - triggers: # Wie spät ist es?
+      - wie spaet
+      - ["wie","viel","uhr"]   
+    responses:
+      - "Können Sie nicht selbst nachschauen, wie spät es ist? Haben Sie kein Handy?"
+      - "Schauen Sie doch einfach mal auf die Uhr. Oder muss ich alles für Sie erledigen?"
+      - "Wissen Sie, ein Blick auf die Uhr tut Wunder." 
+  - triggers: # Was?
+      - was?
+      - was fuer?
+      - hae?
+    responses:
+      - "Können Sie sich bitte klarer ausdrücken?"
+      - "Wenn Sie mich schon nicht verstehen, können Sie es wenigstens höflich formulieren."
+  - triggers: # Wie?
+      - wie?
+    responses:
+      - "Nichts wie. Sie haben mich genau verstanden."
+  - triggers: # Warum?
+      - warum?
+      - warum nicht
+      - weshalb?
+      - weshalb nicht
+      - weswegen?
+      - weswegen nicht
+      - wieso?
+      - wieso nicht
+    responses:
+      - "Weil ich es sage. Und das reicht als Grund vollkommen."
+  - triggers: # Ich?
+      - ich?
+    responses:
+      - "Ja, Sie. Wer sonst?"
+      - "Sehen Sie noch jemanden?"
